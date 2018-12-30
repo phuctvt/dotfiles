@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+    <menu id="root-menu" label="OpenBox 3">
+        
+        <menu id="1" label="Accessories">
+            <item label="Thunar">
+                <action name="Execute">
+                    <execute>thunar</execute>
+                </action>
+            </item>
+        </menu>
+        
+        <menu id="2" label="Development">
+            <item label="Sublime Text">
+                <action name="Execute">
+                    <execute>subl</execute>
+                </action>
+            </item>
+        </menu>
+        
+        <menu id="3" label="Internet">
+            <item label="Chromium">
+                <action name="Execute">
+                    <execute>chromium</execute>
+                </action>
+            </item>
+        </menu>
+        
+        <menu id="4" label="Terminals">
+            <item label="urxvt">
+                <action name="Execute">
+                    <execute>urxvt</execute>
+                </action>
+            </item>
+        </menu>
+        
+        <separator/>
+        
+        <menu id="5" label="System">
+            <item label="Customize Look and Feel">
+                <action name="Execute">
+                    <execute>lxappearance</execute>
+                </action>
+            </item>
+            <item label="Openbox Configuration Manager">
+                <action name="Execute">
+                    <execute>obconf</execute>
+                </action>
+            </item>
+        </menu>
+        
+        <!-- <menu id="client-list-menu"/> -->
+        
+        <item label="Reconfigure Openbox">
+            <action name="Reconfigure"/>
+        </item>
+        
+        <item label="Exit Openbox">
+            <action name="Exit"/>
+        </item>
+    
+    </menu>
+</openbox_menu>
