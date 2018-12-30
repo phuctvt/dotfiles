@@ -54,6 +54,11 @@
         <item label="Reconfigure Openbox">
             <action name="Reconfigure"/>
         </item>
+        <item label="Reload tint2">
+            <action name="Execute">
+                <execute>killall -SIGUSR1 tint2</execute>
+            </action>
+        </item>
         
         <item label="Exit Openbox">
             <action name="Exit"/>

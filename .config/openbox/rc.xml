@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Mikachu</name>
+    <name>Mistral</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -316,7 +316,7 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-<!--     <keybind key="W-e">
+    <!--     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -333,6 +333,11 @@
     <keybind key="W-e">
       <action name="Execute">
         <execute>thunar</execute>
+      </action>
+    </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <execute>killall -SIGUSR1 tint2</execute>
       </action>
     </keybind>
   </keyboard>

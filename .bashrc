@@ -13,6 +13,7 @@ alias ll='ls -la'
 alias grep='grep --color=auto'
 alias dropbox='python2 ~/.dropbox-dist/dropbox.py'
 alias gvol='pulsemixer --get-volume'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.my-dotfiles --work-tree=$HOME'
 function svol() {
 	pulsemixer --set-volume $1 --get-volume
 }
