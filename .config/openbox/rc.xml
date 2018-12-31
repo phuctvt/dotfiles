@@ -325,20 +325,59 @@
         <command>kfmclient openProfile filemanagement</command>
       </action>
     </keybind> -->
-    <keybind key="C-A-T">
+    <keybind key="W-r">
       <action name="Execute">
-        <execute>urxvt</execute>
+        <command>openbox --reconfigure</command>
       </action>
-    </keybind>
-    <keybind key="W-e">
       <action name="Execute">
-        <execute>thunar</execute>
+        <command>notify-send --expire-time=500 --hint=int:transient:1 'Openbox' 'Reconfigured!' --icon=dialog-information</command>
       </action>
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <execute>killall -SIGUSR1 tint2</execute>
+        <command>killall -SIGUSR1 tint2</command>
       </action>
+    </keybind>
+    <keybind key="C-A-T">
+      <action name="Execute">
+        <command>urxvt</command>
+      </action>
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>pulsemixer --change-volume +5</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>pulsemixer --change-volume -5</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>pulsemixer --toggle-mute</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight +5</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -5</command>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="Maximize"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Unmaximize"/>
     </keybind>
   </keyboard>
   <mouse>

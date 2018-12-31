@@ -98,7 +98,7 @@ border_color_pressed = #ffffff 60
 
 #-------------------------------------
 # Panel
-panel_items = LF:SC
+panel_items = LF:S:EE:C
 panel_size = 30% 32
 panel_margin = 0 0
 panel_padding = 4 0 4
@@ -248,6 +248,24 @@ separator_size = 3
 separator_padding = 1 0
 
 #-------------------------------------
+# Separator 2
+separator = new
+separator_background_id = 0
+separator_color = #777777 87
+separator_style = dots
+separator_size = 3
+separator_padding = 1 0
+
+#-------------------------------------
+# Separator 3
+separator = new
+separator_background_id = 0
+separator_color = #777777 87
+separator_style = dots
+separator_size = 3
+separator_padding = 1 0
+
+#-------------------------------------
 # Tooltip
 tooltip_show_timeout = 0.5
 tooltip_hide_timeout = 0.1
@@ -256,3 +274,16 @@ tooltip_background_id = 5
 tooltip_font_color = #222222 100
 tooltip_font = sans 9
 
+#-------------------------------------
+# Executor 1
+execp = new
+execp_command = xbacklight | awk -F. '{print " "$1}'
+execp_font_color = #eeeeee 100
+execp_interval = 1
+
+#-------------------------------------
+# Executor 2
+execp = new
+execp_command = pulsemixer --get-volume | awk '{print " " $1}'
+execp_font_color = #eeeeee 100
+execp_interval = 1
