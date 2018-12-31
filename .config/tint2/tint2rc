@@ -278,12 +278,12 @@ tooltip_font = sans 9
 # Executor 1
 execp = new
 execp_command = xbacklight | awk -F. '{print " "$1}'
-execp_font_color = #eeeeee 100
+execp_font_color = #cccccc 100
 execp_interval = 1
 
 #-------------------------------------
 # Executor 2
 execp = new
-execp_command = pulsemixer --get-volume | awk '{print " " $1}'
-execp_font_color = #eeeeee 100
+execp_command = $HOME/get-volume.sh
+execp_font_color = #cccccc 100
 execp_interval = 1
