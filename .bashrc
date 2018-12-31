@@ -23,6 +23,5 @@ function cvol() {
 if [ -e ~/git-prompt.sh ]; then
 	. ~/git-prompt.sh
 fi
-PS1='\u \w $ '
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1='\w$(__git_ps1 " (%s)")\$ '
+PS1='\u \w$(__git_ps1 " (%s)")\$ '
