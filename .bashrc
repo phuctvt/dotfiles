@@ -20,4 +20,9 @@ function svol() {
 function cvol() {
 	pulsemixer --change-volume $1 --get-volume
 }
+if [ -e ~/git-prompt.sh ]; then
+	. ~/git-prompt.sh
+fi
 PS1='\u \w $ '
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\w$(__git_ps1 " (%s)")\$ '
