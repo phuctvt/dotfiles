@@ -1,6 +1,7 @@
 xinput set-prop 'ELAN0501:00 04F3:300B Touchpad' 303 1 &
 xinput set-prop 'ELAN0501:00 04F3:300B Touchpad' 285 1 &
 ~/.fehbg &
+compton &
 (sleep 2s && tint2) &
 pulseaudio --kill && pulseaudio --daemonize &
 ~/.dropbox-dist/dropboxd &

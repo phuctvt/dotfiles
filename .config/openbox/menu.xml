@@ -8,6 +8,11 @@
                     <execute>thunar</execute>
                 </action>
             </item>
+            <item label="gucharmap (GNOME Character Map)">
+                <action name="Execute">
+                    <execute>gucharmap</execute>
+                </action>
+            </item>
         </menu>
         
         <menu id="2" label="Development">
