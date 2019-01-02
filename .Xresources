@@ -1,6 +1,9 @@
 URxvt.font: xft:xos4 Terminus:style=Regular
 URxvt.scrollBar_right: true
-!URxvt.perl-ext-common: tabbed
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.perl-ext-common: tabbed
 
 
 ! special
