@@ -26,3 +26,4 @@ if [ -e ~/git-prompt.sh ]; then
 fi
 GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\u \w$(__git_ps1 " (%s)") \$ '
+PS1='\[\e[92m\]\u \[\e[96m\]\w\[\e[34m\]$(__git_ps1 " (%s)") \[\e[0m\]\$ '

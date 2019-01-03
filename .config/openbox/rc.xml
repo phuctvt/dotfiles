@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Natura</name>
+    <name>1977-Grey</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -419,6 +419,9 @@
         <to>4</to>
       </action>
     </keybind>
+    <keybind key="W-o">
+      <action name="ToggleAlwaysOnTop"/>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -780,10 +783,13 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application class="URxvt">
+    <!--     <application class="URxvt">
       <layer>above</layer>
     </application>
     <application class="Sublime_text">
+      <layer>above</layer>
+    </application> -->
+    <application class="Plank">
       <layer>above</layer>
     </application>
     <!--
