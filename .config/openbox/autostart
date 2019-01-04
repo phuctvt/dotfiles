@@ -3,6 +3,7 @@ xinput set-prop 'ELAN0501:00 04F3:300B Touchpad' 285 1 &
 ~/.fehbg &
 compton --config ~/dotfiles/.compton.conf &
 (sleep 2s && tint2) &
-plank &
+killall plank; plank &
 pulseaudio --kill && pulseaudio --daemonize &
 ~/.dropbox-dist/dropboxd &
+notify-send --hint=int:transient:1 "autostart" "End of line of openbox-autostart"
