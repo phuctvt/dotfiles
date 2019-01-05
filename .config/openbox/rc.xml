@@ -373,6 +373,11 @@
         <command>~/dotfiles/scripts/change-brightness.sh down</command>
       </action>
     </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <command>rofi -show run</command>
+      </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="Maximize"/>
     </keybind>
