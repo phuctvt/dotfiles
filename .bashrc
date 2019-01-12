@@ -21,8 +21,8 @@ function svol() {
 function cvol() {
 	pulsemixer --change-volume $1 --get-volume
 }
-if [ -e ~/git-prompt.sh ]; then
-	. ~/git-prompt.sh
+if [ -e /usr/share/git/completion/git-prompt.sh ]; then
+	. /usr/share/git/completion/git-prompt.sh
 fi
 if [ -e /usr/share/git/completion/git-completion.bash ]; then
 	. /usr/share/git/completion/git-completion.bash
