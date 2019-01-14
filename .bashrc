@@ -21,8 +21,11 @@ function svol() {
 function cvol() {
 	pulsemixer --change-volume $1 --get-volume
 }
-if [ -e ~/git-prompt.sh ]; then
-	. ~/git-prompt.sh
+if [ -e /usr/share/git/completion/git-prompt.sh ]; then
+	. /usr/share/git/completion/git-prompt.sh
+fi
+if [ -e /usr/share/git/completion/git-completion.bash ]; then
+	. /usr/share/git/completion/git-completion.bash
 fi
 GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\u \w$(__git_ps1 " (%s)") \$ '
