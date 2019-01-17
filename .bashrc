@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Above is the defaults
-alias ll='ls -la'
+alias ll='ls -lah'
 alias grep='grep --color=auto'
 alias dropbox='python2 ~/.dropbox-dist/dropbox.py'
 alias gvol='pulsemixer --get-volume'
