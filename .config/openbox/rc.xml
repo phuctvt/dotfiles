@@ -338,6 +338,11 @@
         <command>killall -SIGUSR1 tint2</command>
       </action>
     </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>xfce4-screenshooter</command>
+      </action>
+    </keybind>
     <keybind key="C-A-T">
       <action name="Execute">
         <command>urxvt</command>

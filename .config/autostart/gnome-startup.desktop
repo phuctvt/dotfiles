@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=GNOME Startup
+Exec=/home/leo/dotfiles/scripts/gnome-startup.sh
