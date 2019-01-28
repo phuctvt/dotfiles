@@ -27,6 +27,9 @@ fi
 if [ -e /usr/share/git/completion/git-completion.bash ]; then
 	. /usr/share/git/completion/git-completion.bash
 fi
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\u \w$(__git_ps1 " (%s)") \$ '
 PS1='\[\e[32m\]\u \[\e[33m\]\w\[\e[34m\]$(__git_ps1 " (%s)") \[\e[0m\]\$ '
