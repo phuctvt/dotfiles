@@ -1,4 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Dropbox
-Exec=/usr/bin/python /home/leo/.dropbox-dist/dropbox.py start
