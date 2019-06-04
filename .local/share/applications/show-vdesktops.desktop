@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/leo/.local/share/applications/show-vdesktops.sh
+Icon=mate-desktop-item-edit
+Terminal=false
+Name=Show Virtual Desktops
