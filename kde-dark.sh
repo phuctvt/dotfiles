@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+if [ -r "$HOME/.dbus/Xdbus" ]; then
+  . "$HOME/.dbus/Xdbus"
+fi
+
 lookandfeeltool --apply MyDark
 kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key LayoutName big_icons
 qdbus org.kde.KWin /KWin org.kde.KWin.reconfigure
@@ -27,3 +31,5 @@ for (i=0;i<Desktops.length;i++) {
 }'
 
 cp /home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg ~/.local/share/plasma/look-and-feel/MyDark/contents/splash/images/test.jpg
+
+notify-send 'Applied the dark theme'
