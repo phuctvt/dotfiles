@@ -9,7 +9,7 @@ kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-t
 kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-cursor-theme-name breeze_cursors
 
 ## konsole
-# konsoleprofile "colors=Solarized Dark Blur"
+konsoleprofile "colors=Solarized Dark Blur"
 kwriteconfig5 --file ~/.config/konsolerc --group 'Desktop Entry' --key DefaultProfile 'Leo Dark.profile'
 
 ## wallpaper
@@ -23,3 +23,5 @@ for (i=0;i<Desktops.length;i++) {
                                     "General");
         d.writeConfig("Image", "file:///home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg");
 }'
+
+cp /home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg ~/.local/share/plasma/look-and-feel/MyDark/contents/splash/images/test.jpg

@@ -13,7 +13,7 @@ kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-t
 kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-cursor-theme-name Breeze_Snow
 
 ## konsole
-# konsoleprofile "colors=Solarized Light Blur"
+konsoleprofile "colors=Solarized Light Blur"
 kwriteconfig5 --file ~/.config/konsolerc --group 'Desktop Entry' --key DefaultProfile 'Leo Light.profile'
 
 ## wallpaper
@@ -27,3 +27,5 @@ for (i=0;i<Desktops.length;i++) {
                                     "General");
         d.writeConfig("Image", "file:///home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg");
 }'
+
+cp /home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg ~/.local/share/plasma/look-and-feel/MyLight/contents/splash/images/test.jpg
