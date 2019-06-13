@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # https://www.reddit.com/r/kde/comments/8207td/change_the_theming_based_on_the_time/
 # https://zren.github.io/2018/10/29/creating-a-new-plasma-look-and-feel
 # https://www.reddit.com/r/kde/comments/95ot5f/is_there_a_way_to_change_the_plasma_desktop_theme/
@@ -14,7 +16,7 @@ kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-c
 
 ## konsole
 konsoleprofile "colors=Solarized Light Blur"
-kwriteconfig5 --file ~/.config/konsolerc --group 'Desktop Entry' --key DefaultProfile 'Leo Light.profile'
+kwriteconfig5 --file ~/.local/share/konsole/Current\ Profile.profile --group Appearance --key ColorScheme 'Solarized Light Blur'
 
 ## wallpaper
 dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
@@ -29,3 +31,7 @@ for (i=0;i<Desktops.length;i++) {
 }'
 
 cp /home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg ~/.local/share/plasma/look-and-feel/MyLight/contents/splash/images/test.jpg
+
+## lockscreen wall
+
+## login wall

@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 lookandfeeltool --apply MyDark
 kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key LayoutName big_icons
 qdbus org.kde.KWin /KWin org.kde.KWin.reconfigure
@@ -10,7 +12,7 @@ kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-c
 
 ## konsole
 konsoleprofile "colors=Solarized Dark Blur"
-kwriteconfig5 --file ~/.config/konsolerc --group 'Desktop Entry' --key DefaultProfile 'Leo Dark.profile'
+kwriteconfig5 --file ~/.local/share/konsole/Current\ Profile.profile --group Appearance --key ColorScheme 'Solarized Dark Blur'
 
 ## wallpaper
 dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
