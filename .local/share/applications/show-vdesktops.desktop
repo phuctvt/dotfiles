@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 [Desktop Entry]
 Type=Application
 Exec=/home/leo/.local/share/applications/show-vdesktops.sh

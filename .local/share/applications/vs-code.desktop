@@ -1,0 +1,22 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Categories=Development;WebDevelopment;IDE;Utility;TextEditor;
+Comment[en_US]=Text Editor
+Comment=Text Editor
+Exec=/home/leo/.VSCode-linux-x64/code %f
+GenericName[en_US]=
+GenericName=
+Icon=visual-studio-code
+MimeType=text/plain;inode/directory;
+Name[en_US]=Visual Studio Code
+Name=Visual Studio Code
+Path=
+StartupNotify=true
+StartupWMClass=code
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
