@@ -4,6 +4,7 @@ if [ -r "$HOME/.dbus/Xdbus" ]; then
   . "$HOME/.dbus/Xdbus"
 fi
 
+# qt
 lookandfeeltool --apply MyDark
 kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key LayoutName big_icons
 qdbus org.kde.KWin /KWin org.kde.KWin.reconfigure
@@ -30,6 +31,14 @@ for (i=0;i<Desktops.length;i++) {
         d.writeConfig("Image", "file:///home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg");
 }'
 
+## splash
 cp /home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg ~/.local/share/plasma/look-and-feel/MyDark/contents/splash/images/test.jpg
 
-notify-send 'Applied the dark theme'
+## lockscreen wall
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image file:///home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg
+
+## login wall
+sudo cp /home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg /usr/share/sddm/themes/plasma-chili/wall.jpg
+
+## success
+notify-send -u low 'Applied the dark theme'

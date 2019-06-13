@@ -4,10 +4,7 @@ if [ -r "$HOME/.dbus/Xdbus" ]; then
   . "$HOME/.dbus/Xdbus"
 fi
 
-# https://www.reddit.com/r/kde/comments/8207td/change_the_theming_based_on_the_time/
-# https://zren.github.io/2018/10/29/creating-a-new-plasma-look-and-feel
-# https://www.reddit.com/r/kde/comments/95ot5f/is_there_a_way_to_change_the_plasma_desktop_theme/
-
+# qt
 lookandfeeltool --apply MyLight
 kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key LayoutName big_icons
 qdbus org.kde.KWin /KWin org.kde.KWin.reconfigure
@@ -34,10 +31,21 @@ for (i=0;i<Desktops.length;i++) {
         d.writeConfig("Image", "file:///home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg");
 }'
 
+## splash
 cp /home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg ~/.local/share/plasma/look-and-feel/MyLight/contents/splash/images/test.jpg
 
 ## lockscreen wall
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image file:///home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg
 
 ## login wall
+sudo cp /home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg /usr/share/sddm/themes/plasma-chili/wall.jpg
 
-notify-send 'Applied the light theme'
+## success
+notify-send -u low 'Applied the light theme'
+
+
+# -------------------
+# Ref resources:
+#   https://www.reddit.com/r/kde/comments/8207td/change_the_theming_based_on_the_time/
+#   https://zren.github.io/2018/10/29/creating-a-new-plasma-look-and-feel
+#   https://www.reddit.com/r/kde/comments/95ot5f/is_there_a_way_to_change_the_plasma_desktop_theme/
