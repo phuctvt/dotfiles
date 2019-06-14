@@ -12,8 +12,10 @@ qdbus org.kde.KWin /KWin org.kde.KWin.reconfigure
 ## gtk
 gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'breeze_cursors'
+gsettings set org.gnome.desktop.interface icon-theme 'Newaita-dark'
 kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-theme-name Breeze-Dark
 kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-cursor-theme-name breeze_cursors
+kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-icon-theme-name Newaita-dark
 
 ## konsole
 konsoleprofile "colors=Solarized Dark Blur"
@@ -36,6 +38,9 @@ cp /home/leo/dotfiles/kde/dark.jpg ~/.local/share/plasma/look-and-feel/MyDark/co
 
 ## lockscreen wall
 kwriteconfig5 --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image file:///home/leo/dotfiles/kde/dark.jpg
+
+## kwrite
+kwriteconfig5 --file ~/.config/kwriterc --group 'KTextEditor Renderer' --key Schema 'Breeze Dark'
 
 ## login wall
 sudo cp /home/leo/dotfiles/kde/dark.jpg /usr/share/sddm/themes/plasma-chili/wall.jpg

@@ -12,8 +12,10 @@ qdbus org.kde.KWin /KWin org.kde.KWin.reconfigure
 ## gtk
 gsettings set org.gnome.desktop.interface gtk-theme 'Breeze'
 gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_Snow'
+gsettings set org.gnome.desktop.interface icon-theme 'Newaita'
 kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-theme-name Breeze
 kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-cursor-theme-name Breeze_Snow
+kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-icon-theme-name Newaita
 
 ## konsole
 konsoleprofile "colors=Solarized Light Blur"
@@ -42,6 +44,9 @@ sudo cp /home/leo/dotfiles/kde/light.jpg /usr/share/sddm/themes/plasma-chili/wal
 
 ## login cursor
 sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key CursorTheme Breeze_Snow
+
+## kwrite
+kwriteconfig5 --file ~/.config/kwriterc --group 'KTextEditor Renderer' --key Schema 'Normal'
 
 ## success
 notify-send -u low 'Applied the light theme'
