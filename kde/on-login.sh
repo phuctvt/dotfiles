@@ -12,7 +12,7 @@ if (( 6 < 10#$H && 10#$H < 18  )); then
     	$HOME/dotfiles/kde/pre-light.sh
     	echo 'light' > $HOME/.kde-current-look
     else
-    	notify-send 'Already in light looking'
+    	notify-send -u low 'Already in light looking'
     fi
 else
 	echo '6pm < now < 6am'
@@ -20,6 +20,6 @@ else
     	$HOME/dotfiles/kde/pre-dark.sh
     	echo 'dark' > $HOME/.kde-current-look
     else
-    	notify-send 'Already in dark looking'
+    	notify-send -u low 'Already in dark looking'
     fi
 fi
