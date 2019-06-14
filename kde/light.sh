@@ -48,6 +48,9 @@ sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key CursorTheme Breeze_
 ## kwrite
 kwriteconfig5 --file ~/.config/kwriterc --group 'KTextEditor Renderer' --key Schema 'Normal'
 
+## save
+echo 'light' > $HOME/.kde-current-look
+
 ## success
 notify-send -u low 'Applied the light theme'
 

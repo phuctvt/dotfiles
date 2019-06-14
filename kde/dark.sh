@@ -48,5 +48,8 @@ sudo cp /home/leo/dotfiles/kde/dark.jpg /usr/share/sddm/themes/plasma-chili/wall
 ## login cursor
 sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key CursorTheme breeze_cursors
 
+## save
+echo 'dark' > $HOME/.kde-current-look
+
 ## success
 notify-send -u low 'Applied the dark theme'
