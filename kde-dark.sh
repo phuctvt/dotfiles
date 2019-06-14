@@ -40,5 +40,8 @@ kwriteconfig5 --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper
 ## login wall
 sudo cp /home/leo/Dropbox/Wallpapers/lighter_hand_fire_111582_1920x1080.jpg /usr/share/sddm/themes/plasma-chili/wall.jpg
 
+## login cursor
+sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key CursorTheme breeze_cursors
+
 ## success
 notify-send -u low 'Applied the dark theme'

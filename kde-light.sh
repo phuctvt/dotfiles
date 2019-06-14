@@ -40,9 +40,8 @@ kwriteconfig5 --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper
 ## login wall
 sudo cp /home/leo/Dropbox/Wallpapers/daisies_flowers_field_111640_1920x1080.jpg /usr/share/sddm/themes/plasma-chili/wall.jpg
 
-## firefox
-
 ## login cursor
+sudo kwriteconfig5 --file /etc/sddm.conf --group Theme --key CursorTheme Breeze_Snow
 
 ## success
 notify-send -u low 'Applied the light theme'
