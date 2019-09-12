@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while true
+do
+    s="   ·   "
+    time="$(date +"%a %b-%d %I:%M")"
+    light=" $(light -G | awk -F'.' '{print $1}')"
+    volume=" $(pulsemixer --get-volume | awk '{print $1}')"
+    loadavg="$(cat /proc/loadavg | awk '{print $1}')"
+    end=" "
+	echo "$volume$s$light$s$loadavg$s$time$end"
+	sleep 1s
+done
