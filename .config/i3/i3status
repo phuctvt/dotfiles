@@ -32,12 +32,3 @@ do
 	echo "$inputMethod$s$volume$s$light$s$loadavg$s$time$end"
 	sleep 1s
 done
-
-echo '{ "version": 1 }'
-echo '['
-echo '[]'
-while :;
-do
-	echo ",[{\"name\":\"time\",\"full_text\":\"$(date)\"}]"
-	sleep 1
-done
