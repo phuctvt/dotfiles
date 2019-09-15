@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# https://lingojam.com/FancyLetters
+# https://faq.i3wm.org/question/332/custom-status_command-text-update.1.html
+# https://i3wm.org/docs/i3bar-protocol.html
+
+getInputMethod () {
+    if [ "$(ibus engine)" = "Unikey" ]; then
+        echo "V"
+    else
+        echo "E"
+    fi 
+}
+
+getVolume() {
+    if [ "$(pulsemixer --get-mute)" = 1 ]; then
+        echo ""
+    else
+        echo " $(pulsemixer --get-volume | awk '{print $1}')"
+    fi
+}
+
+while true
+do
+    s="   ·   "
+    inputMethod="$(getInputMethod)"
+    time="$(date +"%a.%e %l:%M")"
+    light=" $(light -G | awk -F'.' '{print $1}')"
+    volume="$(getVolume)"
+    loadavg=" $(cat /proc/loadavg | awk '{print $1}')"
+    end=" "
+	echo "$inputMethod$s$volume$s$light$s$loadavg$s$time$end"
+	sleep 1s
+done
+
+echo '{ "version": 1 }'
+echo '['
+echo '[]'
+while :;
+do
+	echo ",[{\"name\":\"time\",\"full_text\":\"$(date)\"}]"
+	sleep 1
+done
