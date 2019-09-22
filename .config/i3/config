@@ -175,6 +175,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -3
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo light -A 3
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 3
+bindsym $mod+b exec --no-startup-id ~/.fehbg
 
 # Config.
 for_window [class=".*"] border pixel 2
@@ -188,4 +189,5 @@ gaps inner 10
 # Startup.
 exec --no-startup-id ibus-daemon
 exec --no-startup-id ~/.fehbg
-exec_always --no-startup-id pkill compton; compton -b --config ~/dotfiles/.compton.conf
+exec --no-startup-id xinput set-prop 'ELAN0501:00 04F3:300B Touchpad' 317 1
+exec_always --no-startup-id pkill compton; compton -b --config ~/dotfiles/.compton.conf --blur-background --blur-method kawase --blur-strength 15 --backend glx
