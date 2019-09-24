@@ -94,6 +94,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
+bindsym $mod+grave workspace back_and_forth
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -178,16 +179,17 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 3
 bindsym $mod+b exec --no-startup-id ~/.fehbg
 
 # Config.
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 for_window [class="Thunar"] floating enable
 for_window [class="Lxappearance"] floating enable
 hide_edge_borders smart
 smart_gaps on
 gaps outer 5
 gaps inner 10
+border_radius 0
 
 # Startup.
 exec --no-startup-id ibus-daemon
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xinput set-prop 'ELAN0501:00 04F3:300B Touchpad' 317 1
-exec_always --no-startup-id pkill compton; compton -b --config ~/dotfiles/.compton.conf --blur-background --blur-method kawase --blur-strength 15 --backend glx
+exec_always --no-startup-id pkill compton; compton -b --config ~/dotfiles/.compton.conf --blur-background --blur-method kawase --blur-strength 10 --backend glx
