@@ -23,8 +23,6 @@ zstyle ':completion:*' rehash true
 NEWLINE=$'\n'
 # export PS1="%{$fg[yellow]%}%n %{$fg[cyan]%}%~${NEWLINE}%{$fg[blue]%}> %{$reset_color%}"
 export PS1="%F{219}l%F{224}e%F{229}o %F{147}%~${NEWLINE}%F{87}> %f"
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
