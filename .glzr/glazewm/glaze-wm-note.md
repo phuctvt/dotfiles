@@ -1,0 +1,5 @@
+- (done) make all apps available at system taskbar
+- (done) Outlook reminder should be floating
+- (cancel) migrate top bar to bottom
+- (done) customize status bar to fit the needs
+- moving ws buttons
