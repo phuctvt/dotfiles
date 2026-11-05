@@ -1,0 +1,7 @@
+xcape -e 'Super_L=Super_L|space'
+(sleep 1s && xinput set-prop "pointer:Logitech M720 Triathlon Multi-Device Mouse" "libinput Accel Speed" -0.4) &
+[ -f $HOME/.config/screen-layout.sh ] && $HOME/.config/screen-layout.sh
+[ -f $HOME/.fehbg ] && $HOME/.fehbg
+picom -b
+fcitx5 &
+polybar myBar &
