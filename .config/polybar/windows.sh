@@ -1,6 +1,12 @@
 print_windows() {
     active_id=$(xprop -root _NET_ACTIVE_WINDOW 2>/dev/null | awk '{print $NF}')
-    int_active=$(( 16#${active_id#0x} ))
+    
+    # Check if active_id is a valid hex window ID starting with 0x
+    if [[ "$active_id" =~ ^0x ]]; then
+        int_active=$(( 16#${active_id#0x} ))
+    else
+        int_active=0
+    fi
 
     window_list=""
     while read -r wid desktop machine title; do
