@@ -306,7 +306,7 @@
   </keybind>
   <keybind key="W-space">
     <action name="Execute">
-      <command>rofi -show drun</command>
+      <command>rofi -show drun -theme gruvbox-dark-soft -theme-str 'window { width: 600px; }'</command>
     </action>
   </keybind>
   <keybind key="W-t">

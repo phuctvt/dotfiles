@@ -2,7 +2,7 @@ options="HiFi: Speaker: sink|HiFi: HDMI1: sink"
 
 chosen="$(echo -e "$options" | \
     rofi -sep '|' -dmenu -p "Audio output" -location 3 -yoffset 40 -l 2 \
-    -hover-select -theme android_notification \
+    -hover-select -theme gruvbox-dark-soft \
     -theme-str 'window { width: 300px; }' \
     -me-select-entry '' -me-accept-entry 'MousePrimary')"
 
