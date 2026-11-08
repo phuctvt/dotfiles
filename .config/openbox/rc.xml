@@ -314,9 +314,14 @@
       <command>alacritty</command>
     </action>
   </keybind>
-  <keybind key="W-Return">
+  <keybind key="XF86AudioRaiseVolume">
     <action name="Execute">
-      <command>alacritty</command>
+      <command>pamixer -i 5</command>
+    </action>
+  </keybind>
+  <keybind key="XF86AudioLowerVolume">
+    <action name="Execute">
+      <command>pamixer -d 5</command>
     </action>
   </keybind>
 </keyboard>
