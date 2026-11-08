@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Restart Polybar
+Comment=Restarts all running Polybar instances via IPC
+Exec=sh -c "polybar-msg cmd restart"
+Terminal=false
+Categories=System;Utility;
+Icon=system-restart
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Log Out Openbox
+Comment=Log out of the Openbox session
+Exec=openbox --exit
+Icon=system-log-out
+Terminal=false
+Categories=System;

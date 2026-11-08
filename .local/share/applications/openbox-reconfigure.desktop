@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Reconfigure Openbox
+Comment=Reload Openbox configuration files without restarting the session
+Exec=openbox --reconfigure
+Terminal=false
+Categories=System;Settings;
+Icon=openbox
+
